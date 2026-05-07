@@ -1,4 +1,10 @@
-require('fzf-lua')
+require('fzf-lua').setup({
+  file = {
+    find_cmd = 'fd'
+  },
+  file_icons = false,
+  git_icons = false
+})
 
 vim.keymap.set('n', '<leader>fb', '<cmd>FzfLua buffers<cr>', { desc = 'Find buffers' })
 vim.keymap.set('n', '<leader>ff', '<cmd>FzfLua files<cr>', { desc = 'Find files' })
